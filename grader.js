@@ -1,5 +1,6 @@
 // Grade book app
 
+// Get the average of all the scores
 function getAverage(scores) {
   let sum = 0;
 
@@ -10,6 +11,7 @@ function getAverage(scores) {
   return sum / scores.length;
 }
 
+//Convert the score to a grad letter
 function getGrade(score) {
   if (score === 100) {
     return "A++";
@@ -26,10 +28,12 @@ function getGrade(score) {
   }
 }
 
+//determin if the grade is passing
 function hasPassingGrade(score) {
   return getGrade(score) !== "F";
 }
 
+//Let the student know if they passed
 function studentMsg(totalScores, studentScore) {
   let avg = getAverage(totalScores);
   if(hasPassingGrade(studentScore) === true){
